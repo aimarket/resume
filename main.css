@@ -1,3 +1,10 @@
-.canvas{
+canvas{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flookmallorca.com%2Fwp-content%2Fuploads%2F2018%2F01%2Fbalearic-marine-life.jpg&f=1&nofb=1");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+body{
     background-color: black;
 }

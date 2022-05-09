@@ -6,7 +6,7 @@
 // procedurally.
 // Start loading the image right away, not after the onload event.
 var lines = new Image();
-lines.src = 'http://i.imgur.com/TAJ0Zkw.png';
+lines.src = '/scanLines.png';
 
 window.addEventListener('load', fakeCRT, false);
 
