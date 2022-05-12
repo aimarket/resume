@@ -1,0 +1,25 @@
+.h1-border{
+    background-color: lightskyblue;
+}
+
+.topLine{
+    background-color: lightskyblue;
+    height: .1em;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+h3{
+    color: lightskyblue;
+    font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+}
+
+.LA,
+.RA{
+    background-color: lightskyblue;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin-left: 30%;
+}
