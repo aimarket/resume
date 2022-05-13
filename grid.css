@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: antiquewhite;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
         'mid'
         'bottom'
         'footer';
-    grid-template-rows: 1fr 3fr 2fr 4fr 1fr;
+    grid-template-rows: .7fr 3fr 2fr 4fr .5fr;
     
 }
 
@@ -70,18 +71,31 @@ body {
     gap: .5em;
     display: grid;
     grid-template-areas: 
-    'info skills';
-    
+    'info techskills';
+    grid-template-columns: 1fr 1.1fr;
 }
 
 .info{
     grid-area: info;
     outline: green dashed 2px;
+    display: grid;
+    grid-template-areas: 
+    'innerInfo QR';
+    grid-template-columns: 3fr 1fr;
 }
 
-.skills{
-    grid-area: skills;
+.techskills{
+    grid-area: techskills;
     outline: green dashed 2px;
+}
+.skillGroups{
+    display: flex;
+    flex-direction: column;
+}
+
+.skillGroup{
+    display: flex;
+    flex-direction: row;
 }
 
 .mid{

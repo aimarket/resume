@@ -23,3 +23,32 @@ h3{
     height: 50%;
     margin-left: 30%;
 }
+
+li{
+    font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+    margin-top: .5em;
+    list-style: none;
+}
+
+ul{
+    margin-left: clamp(0em, 1vw + .1em, 1em);
+}
+
+.QR{
+    outline: 2px dashed yellow;
+    padding-top: 50%;
+}
+.code{
+    outline: 5px solid plum;
+    background-color: yellowgreen;
+    width: 80%;
+    height: 40%;
+    margin: 1em;
+}
+
+.box{
+    outline: 5px solid rgb(0, 110, 255);
+    width: 4em;
+    height: 3em;
+    margin: 1em;
+}
