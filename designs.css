@@ -39,11 +39,9 @@ ul{
     padding-top: 50%;
 }
 .code{
-    outline: 5px solid plum;
-    background-color: yellowgreen;
-    width: 80%;
-    height: 40%;
-    margin: 1em;
+    outline: 2px solid plum;
+    background-color: darkblue;
+    padding-top: 100%;
 }
 
 .box{
@@ -51,4 +49,19 @@ ul{
     width: 4em;
     height: 3em;
     margin: 1em;
+}
+.traitBox{
+    outline: 2px solid rgb(215, 18, 195);
+    width: 33%;
+    height: 2em;
+    margin: .2em;
+}
+
+.footerBox{
+    outline: 2px solid rgb(215, 18, 195);
+    background-color: skyblue;
+    margin: auto;
+    width: 95%;
+    height: 75%;
+    
 }
