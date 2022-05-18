@@ -14,15 +14,24 @@ h3{
     font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
 }
 
-.LA,
-.RA{
-    background-color: lightskyblue;
-    text-align: center;
-    align-items: center;
-    width: 50%;
-    height: 50%;
-    margin-left: 30%;
+
+
+.arrowLeft,
+.arrowRight{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+    
 }
+
+.arrowLeft{
+    transform: rotate(135deg);
+}
+.arrowRight{
+    transform: rotate(-45deg);
+}
+
 
 li{
     font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
