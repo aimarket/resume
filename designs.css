@@ -49,8 +49,7 @@ ul{
 }
 .code{
     outline: 2px solid plum;
-    background-color: darkblue;
-    padding-top: 100%;
+    
 }
 
 .box{
@@ -68,7 +67,7 @@ ul{
 
 .footerBox{
     outline: 2px solid rgb(215, 18, 195);
-    background-color: skyblue;
+    background-color: rgb(135, 206, 235);
     margin: auto;
     width: 95%;
     height: 75%;
