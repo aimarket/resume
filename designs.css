@@ -43,13 +43,12 @@ ul{
     margin-left: clamp(0em, 1vw + .1em, 1em);
 }
 
-.QR{
-    outline: 2px dashed yellow;
-    padding-top: 50%;
-}
+
 .code{
     outline: 2px solid plum;
-    
+}
+.QRimage{
+    width: 100%;
 }
 
 .box{
