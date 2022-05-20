@@ -77,3 +77,37 @@ h1 {
       background: transparent;
     }
   }
+
+.topLine{
+    background-color: lightskyblue;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+    animation: topLine 5s infinite;
+}
+@keyframes topLine {
+  to{
+    background-color: lightskyblue;
+    height: .1em;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+
+.footerBox{
+  outline: 2px solid rgb(215, 18, 195);
+  background-color: rgb(135, 206, 235);
+  margin: auto;
+  margin-top: 1em;
+  width: 0%;
+  height: 0%;
+  animation: footerAnim 3s infinite linear;
+}
+
+@keyframes footerAnim{
+  to{
+    margin-top: .2em;
+    height: 55%;
+    width:95%;
+  }
+}

@@ -2,12 +2,7 @@
     background-color: lightskyblue;
 }
 
-.topLine{
-    background-color: lightskyblue;
-    height: .1em;
-    width: 95%;
-    margin-left: 2.5%;
-}
+
 
 h3{
     color: lightskyblue;
@@ -64,11 +59,3 @@ ul{
     margin: .2em;
 }
 
-.footerBox{
-    outline: 2px solid rgb(215, 18, 195);
-    background-color: rgb(135, 206, 235);
-    margin: auto;
-    width: 95%;
-    height: 75%;
-    
-}
