@@ -20,7 +20,7 @@
     
     
     .container{
-        outline: red dashed 2px;
+        outline: red dashed 0px;
     }
     
     .nav{
@@ -73,7 +73,6 @@
     
     .info{
         grid-area: info;
-        outline: green dashed 2px;
         display: flex;
         flex-direction: column;
     }
@@ -81,7 +80,6 @@
         margin-bottom: 1em;
     }
     .QR{
-        outline: 2px dashed yellow;
         display: flex;
         flex-direction: row;
     
@@ -90,7 +88,6 @@
     
     .techskills{
         grid-area: techskills;
-        outline: green dashed 2px;
     }
     .skillGroups{
         display: flex;
@@ -112,12 +109,10 @@
     
     .check{
         grid-area: check;
-        outline: green dashed 2px;
     }
     
     .traits{
         grid-area: traits;
-        outline: green dashed 2px;
     }
     
     .traitGroups{

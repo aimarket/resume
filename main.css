@@ -95,13 +95,12 @@ h1 {
 }
 
 .footerBox{
-  outline: 2px solid rgb(215, 18, 195);
   background-color: rgb(135, 206, 235);
   margin: auto;
   margin-top: 1em;
   width: 0%;
   height: 0%;
-  animation: footerAnim 3s infinite linear;
+  animation: footerAnim 3s forwards linear;
 }
 
 @keyframes footerAnim{

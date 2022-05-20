@@ -80,7 +80,6 @@
 
     .info{
         grid-area: info;
-        outline: green dashed 0px;
         display: grid;
         grid-template-areas: 
         'innerInfo QR';
@@ -91,12 +90,10 @@
     }
     .QR{
         grid-area: QR;
-        outline: 0px dashed yellow;
     }
 
     .techskills{
         grid-area: techskills;
-        outline: green dashed 0px;
     }
     .skillGroups{
         display: flex;
@@ -118,12 +115,10 @@
 
     .check{
         grid-area: check;
-        outline: green dashed 0px;
     }
 
     .traits{
         grid-area: traits;
-        outline: green dashed 0px;
     }
 
     .traitGroups{
