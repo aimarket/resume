@@ -22,7 +22,7 @@ html{
 
 .h1-border {
   width: 0rem;
-  animation: borderextend 3s forwards;
+  animation: borderextend 6s forwards .7s;
 }
 
 
