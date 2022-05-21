@@ -33,15 +33,29 @@ li{
     margin-top: .5em;
 }
 
-ul{
-    margin-left: clamp(0em, 1vw + .1em, 1em);
-}
+ul.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none}
+ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+        "········································"
+        "········································"}
+ul.leaders span:first-child {
+    padding-right: 0.33em;
+    background: black}
+ul.leaders span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: black}
 
-.rtl{
-    text-align-last: right;
-}
 p{
     font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+    color: aliceblue;
 }
 
 .QRimage{
