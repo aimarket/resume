@@ -10,6 +10,10 @@ h3{
 }
 
 
+.exp{
+    border-radius: 1em;
+    border: .2em solid aliceblue;
+}
 
 .arrowLeft,
 .arrowRight{
@@ -63,15 +67,24 @@ p{
 }
 
 .box{
-    outline: 5px solid rgb(0, 110, 255);
+    border: .2em solid skyblue;
+    border-radius: .5em;
     width: 4em;
     height: 3em;
-    margin: 1em;
+    margin: .5em;
+}
+
+.traitGroups{
+    margin-top: 1em;
 }
 .traitBox{
-    outline: 2px solid rgb(215, 18, 195);
+    outline: 2px solid aliceblue;
     width: 33%;
     height: 2em;
-    margin: .2em;
+}
+.trait{
+    margin-top: .2em;
+    text-align: center;
+    
 }
 
