@@ -154,3 +154,22 @@ h1 {
 .arrowRight{
   transform: rotate(-45deg);
 }
+
+
+.nameBox{
+  border: 1px solid skyblue;
+  border-radius: 0 0 1em 0;
+  width: 0%;
+  margin-bottom:.3em;
+  white-space: nowrap;
+  animation: nameReveal 1s forwards linear;
+}
+
+@keyframes nameReveal{
+  to{
+    border: 1px solid skyblue;
+    border-radius: 0 0 1em 0;
+    width: 50%;
+    margin-bottom:.3em;
+  }
+}
