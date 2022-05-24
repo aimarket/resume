@@ -15,21 +15,7 @@ h3{
     border: .2em solid aliceblue;
 }
 
-.arrowLeft,
-.arrowRight{
-    display: inline-block;
-    border: solid skyblue;
-    border-width: 0 .15em .15em 0;
-    padding: .5em;
-    
-}
 
-.arrowLeft{
-    transform: rotate(135deg);
-}
-.arrowRight{
-    transform: rotate(-45deg);
-}
 
 
 li{

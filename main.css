@@ -83,7 +83,7 @@ h1 {
     height: .1em;
     width: 0%;
     margin-left: 50%;
-    animation: topLine 5s infinite;
+    animation: topLine 5s ease-in-out infinite;
 }
 @keyframes topLine {
   to{
@@ -109,4 +109,48 @@ h1 {
     height: 55%;
     width:95%;
   }
+}
+
+.expT{
+  color: black;
+  font-size: clamp(0rem, 1vw + .1rem, .5rem);
+  animation: navReveal 1.5s forwards linear;
+}
+
+.cvT, .statsT, 
+.socialT, .contactT{
+  color: black;
+  font-size: clamp(0rem, 1vw + .1rem, .5rem);
+  animation: navReveal 3s forwards linear;
+}
+
+@keyframes navReveal {
+  to{
+  color: skyblue;
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+  }
+}
+
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 3s forwards linear;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
 }
