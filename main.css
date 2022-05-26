@@ -20,7 +20,7 @@ html{
   font-size: .35em;
 }
 
-.h1-border {
+.h2-border {
   width: 0rem;
   animation: borderextend 6s forwards .7s;
 }
@@ -32,7 +32,7 @@ html{
   }
 }
 
-h1 {
+h2 {
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
     position: relative;
     font-family: monospace;
@@ -42,8 +42,8 @@ h1 {
     
   }
   
-  h1::before,
-  h1::after {
+  h2::before,
+  h2::after {
     content: "";
     position: absolute;
     top: 0;
@@ -52,13 +52,13 @@ h1 {
     left: 0;
   }
   
-  h1::before {
+  h2::before {
     background: var(--bg-color);
     animation: typewriter var(--typewriterSpeed)
       steps(var(--typewriterCharacters)) 1s forwards;
   }
   
-  h1::after {
+  h2::after {
     width: 0.6em;
     background: rgb(255, 255, 255);
     animation: typewriter var(--typewriterSpeed)
