@@ -1,3 +1,13 @@
+/*Maybe change this text shadow animation extremly taxing on gpu*/
+*{
+  text-shadow: 0em 0em 0em rgb(187, 234, 216);
+  animation: textGlow 5s ease-in-out infinite;
+}
+@keyframes textGlow {
+  to{
+    text-shadow: .1em .1em 1em rgb(187, 234, 216);
+  }
+}
 canvas{
     position: absolute;
     left: 0;
