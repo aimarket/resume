@@ -23,7 +23,7 @@ html{
 
 .h2-border {
   width: 0rem;
-  animation: borderextend 6s forwards .7s;
+  animation: borderextend 6s forwards 1.7s;
 }
 
 
@@ -56,14 +56,14 @@ h2 {
   h2::before {
     background: var(--bg-color);
     animation: typewriter var(--typewriterSpeed)
-      steps(var(--typewriterCharacters)) 1s forwards;
+      steps(var(--typewriterCharacters)) 2s forwards;
   }
   
   h2::after {
     width: 0.6em;
     background: rgb(255, 255, 255);
     animation: typewriter var(--typewriterSpeed)
-        steps(var(--typewriterCharacters)) 1s forwards,
+        steps(var(--typewriterCharacters)) 2s forwards,
       blink 350ms steps(var(--typewriterCharacters)) infinite;
   }
 
@@ -84,7 +84,7 @@ h2 {
     height: .1em;
     width: 0%;
     margin-left: 50%;
-    animation: topLine 5s alternate infinite steps(70); /*change change steps for every line based on their size*/
+    animation: topLine 5s alternate infinite steps(70) 1s; /*change change steps for every line based on their size*/
 }
 @keyframes topLine {
   from {
@@ -104,7 +104,7 @@ h2 {
   margin-top: 1em;
   width: 0%;
   height: 0%;
-  animation: footerAnim 3s forwards linear;
+  animation: footerAnim 3s forwards linear 1s;
 }
 
 @keyframes footerAnim{
@@ -127,7 +127,7 @@ h2 {
 .cvT, .statsT, .expT,
 .socialT, .contactT{
   font-size: clamp(0rem, 1vw + .1rem, .5rem);
-  animation: navReveal 3s forwards linear;
+  animation: navReveal 3s forwards linear 1s;
 }
 
 @keyframes navReveal {
@@ -141,7 +141,7 @@ h2 {
   display: inline-block;
   border: solid black;
   border-width: 0 0 0 0;
-  animation: arrowAnim 3s forwards linear;
+  animation: arrowAnim 3s forwards linear 1s;
 }
 
 
@@ -168,7 +168,7 @@ h2 {
   width: 0%;
   margin-bottom:.3em;
   white-space: nowrap;
-  animation: nameReveal 1s forwards linear;
+  animation: nameReveal 1s forwards linear 1s;
 }
 
 @keyframes nameReveal{
