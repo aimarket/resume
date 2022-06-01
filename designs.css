@@ -1,18 +1,17 @@
-.h2-border{
-    background-color: lightskyblue;
-}
-
-
 
 h3{
     color: lightskyblue;
-    font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+    font-size: clamp(.5rem, 1.5vw + 1rem, 2.3rem);
+}
+h4{
+    color: lightskyblue;
+    font-size: clamp(.2rem, 1.3vw + 1rem, 2.3rem);
 }
 
 
 
 li{
-    font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+    font-size: clamp(.2rem, 1vw + 1rem, 2.5rem);
     margin-top: .5em;
 }
 
@@ -37,7 +36,7 @@ ul.leaders span + span {
     background: black}
 
 p{
-    font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+    font-size: clamp(.2rem, 1vw + 1rem, 2.5rem);
     color: aliceblue;
 }
 

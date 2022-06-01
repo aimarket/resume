@@ -32,73 +32,85 @@ body{
     }
 }
 
+div{
+  font-size: clamp(.21rem, 1.5vw + 1rem, 2.5rem);
+}
+
 html{
   font-size: .35em;
 }
 
 .h2-border {
-  width: 0rem;
-  animation: borderextend 6s forwards 1.7s;
+  width: 0%;
+  box-shadow: 0 0 0em lightskyblue;
+  background-color: lightskyblue;
+  border-radius: 5px 5px 5px 5px;
+  opacity: .9;
+  animation: borderextend 6s forwards 3s, glow 0s 10s forwards;
 }
 
-
+@keyframes glow {
+  100% {
+    box-shadow: 0 0 1em lightskyblue;
+  }
+}
 @keyframes borderextend {
   to {
     width: 100%;
   }
 }
 
-h2 {
-    font-size: clamp(1rem, 3vw + 1rem, 4rem);
-    position: relative;
-    position: relative;
-    width: max-content;
-    color: rgb(0, 0, 0);
-    
-  }
-  
-  h2::before,
-  h2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  h2::before {
-    background: var(--bg-color);
-    animation: typewriter var(--typewriterSpeed)
-      steps(var(--typewriterCharacters)) 2s forwards;
-  }
-  
-  h2::after {
-    width: 0.6em;
-    background: rgb(255, 255, 255);
-    animation: typewriter var(--typewriterSpeed)
-        steps(var(--typewriterCharacters)) 2s forwards,
-      blink 350ms steps(var(--typewriterCharacters)) infinite;
-  }
+.h2Contact::before{
+  color: black;
+  width: 100%;
+  content: "";
+  animation: h2Reveal 2s 3s steps(7) forwards;
+}
+.h2Contact::after{
+  content: "|";
+  color: aliceblue;
+  animation: blinker 1s linear infinite;
+}
 
-  @keyframes typewriter {
-    to {
-      left: 100%;
-    }
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
+}
 
-  @keyframes blink {
-    to {
-      background: transparent;
-    }
+
+
+@keyframes h2Reveal {
+  14% {
+    content: "C";
   }
+  28% {
+    content: "Co";
+  }
+  42% {
+    content: "Con";
+  }
+  56% {
+    content: "Cont";
+  }
+  70% {
+    content: "Conta";
+  }
+  84% {
+    content: "Contac";
+  }
+  100% {
+    content: "Contact";
+  }
+}
+
 
 .topLine{
     background-color: lightskyblue;
     height: .1em;
     width: 0%;
     margin-left: 50%;
-    animation: topLine 5s alternate infinite steps(70) 1s; /*change change steps for every line based on their size*/
+    animation: topLine 5s alternate forwards steps(70) 1s; /*change change steps for every line based on their size*/
 }
 @keyframes topLine {
   from {
@@ -222,7 +234,7 @@ h2 {
 }
 
 .traitBox{
-  animation: traitBoxColors 1s 2s steps(10) forwards;
+  animation: traitBoxColors 2s 2s steps(10) forwards;
 }
 
 @keyframes traitBoxColors {
