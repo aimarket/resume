@@ -3,7 +3,6 @@
         font-size: 16px;
         height: 100vh;
         max-width: 900px;
-        
         gap: .5em;
         display: grid;
         grid-template-areas:
