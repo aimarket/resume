@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(187, 234, 216);
+}
+
 canvas{
     position: absolute;
     left: 0;
@@ -17,6 +24,7 @@ body{
     background-color: var(--bg-color);
     opacity: .0;
     animation: CRTon 1.5s forwards ease-in;
+    font-family: "Roboto Mono";
 }
 @keyframes CRTon {
     to{
@@ -43,7 +51,6 @@ html{
 h2 {
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
     position: relative;
-    font-family: monospace;
     position: relative;
     width: max-content;
     color: rgb(0, 0, 0);
@@ -172,17 +179,67 @@ h2 {
 .nameBox{
   border: 1px solid skyblue;
   border-radius: 0 0 1em 0;
+  text-overflow: clip; 
+  overflow: hidden;
   width: 0%;
   margin-bottom:.3em;
   white-space: nowrap;
-  animation: nameReveal 1s forwards linear 1s;
+  animation: nameReveal 1s forwards linear 1.5s;
 }
 
 @keyframes nameReveal{
-  to{
+  50%{
     border: 1px solid skyblue;
     border-radius: 0 0 1em 0;
-    width: 50%;
+    width: 100%;
     margin-bottom:.3em;
+  }
+  100%{
+    border: 0px solid black;
+    overflow: visible;
+  }
+}
+
+.traitGroup{
+  opacity: 0;
+  width:0%;
+}
+.traitGroup.one{
+  animation: traitReveal 3s 1s forwards;
+}
+.traitGroup.two{
+  animation: traitReveal 3s 1.5s forwards;
+}
+.traitGroup.three{
+  animation: traitReveal 3s 2s forwards;
+}
+
+@keyframes traitReveal {
+  to{
+    opacity: 100;
+    width: 100%;
+  }
+}
+
+.traitBox{
+  animation: traitBoxColors 1s 2s steps(10) forwards;
+}
+
+@keyframes traitBoxColors {
+  0%{
+    background-color: rgba(187, 234, 216, 0.5);
+  }
+  50%{
+    
+    background-color: rgba(100, 100, 133, 0.5);
+  }
+  70%{
+    background-color: rgba(10, 181, 248, 0.5);
+  }
+  90%{
+    background-color: rgba(12, 250, 159, 0.5);
+  }
+  100%{
+    
   }
 }

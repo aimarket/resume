@@ -60,21 +60,10 @@ p{
     outline: 2px solid aliceblue;
     width: 33%;
     height: 2em;
-    
+    margin-left: .1em;
 }
 .trait{
-    margin-top: .5em;
+    margin-top: .3em;
     text-align: center;
-    
-}
-.BG{
-    position: relative;
-    top: -100%;
-}
-.BGTrait{
-    width: 100%;
-    height: 100%;
-    background-color: skyblue;
-    opacity: .3;
 }
 

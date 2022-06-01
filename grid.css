@@ -1,9 +1,4 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    color: rgb(187, 234, 216);
-}
+
 /*************************change the delay on the other animations****************************
 .startUp{
     background-color: black;
@@ -46,7 +41,6 @@
 *******************************************************************************************/
 @media (min-width: 600px){
     .page {
-        font-family: 'Open Sans', sans-serif;
         font-size: 16px;
         height: 100vh;
         max-width: 900px;
