@@ -131,13 +131,23 @@ html{
   }
 }
 
+.QRimage{
+  opacity: 0;
+  animation: QrCodeFadeIn 3s 2s forwards;
+}
+@keyframes QrCodeFadeIn {
+  to{
+    opacity: 1;
+  }
+}
+
 .skillGroup{
-  scale: 0;
-  animation: skillGroup 3s 3s forwards;
+  transform: translateX(50%) scalex(0);
+  animation: skillGroup 2.5s 2.7s forwards;
 }
 @keyframes skillGroup {
   to {
-    scale: 1;
+    transform: translateX(0) scalex(1);
   }
 }
 
