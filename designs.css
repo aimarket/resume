@@ -44,6 +44,11 @@ p{
     width: 100%;
 }
 
+.skill{
+    font-size: clamp(.1rem, 1vw + 1rem, 2rem);
+    color: aliceblue;
+}
+
 .box{
     border: .2em solid skyblue;
     border-radius: .5em;
@@ -60,6 +65,7 @@ p{
     width: 33%;
     height: 2em;
     margin-left: .1em;
+    margin-right: .1em;
 }
 .trait{
     margin-top: .3em;

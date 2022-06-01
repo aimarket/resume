@@ -11,7 +11,7 @@ canvas{
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: .4;
+    opacity: .3;
     pointer-events: none;
 }
 :root {
@@ -28,7 +28,16 @@ body{
 }
 @keyframes CRTon {
     to{
-        opacity: 1;
+      opacity: 1;
+    }
+}
+.page{
+  transform: scale(0);
+  animation: expand 2s forwards;
+}
+@keyframes expand {
+    to{
+      transform: scale(1);
     }
 }
 
@@ -63,44 +72,72 @@ html{
 .h2Contact::before{
   color: black;
   width: 100%;
+  margin-left: .2em;
   content: "";
-  animation: h2Reveal 2s 3s steps(7) forwards;
+  animation: revealContact 2s 4s steps(12) forwards;
 }
 .h2Contact::after{
-  content: "|";
+  content: "▯ ";
   color: aliceblue;
-  animation: blinker 1s linear infinite;
+  opacity: 0;
+  animation: blinker 1s linear 1s 10;
 }
 
 @keyframes blinker {
   50% {
-    opacity: 0;
+    opacity: 1;
   }
+
 }
 
 
 
-@keyframes h2Reveal {
-  14% {
+@keyframes revealContact {
+  8% {
     content: "C";
   }
-  28% {
+  16% {
     content: "Co";
   }
-  42% {
+  24% {
     content: "Con";
   }
-  56% {
+  32% {
     content: "Cont";
   }
-  70% {
+  40% {
     content: "Conta";
   }
-  84% {
+  48% {
     content: "Contac";
   }
-  100% {
+  56% {
     content: "Contact";
+  }
+  64% {
+    content: "Contact ";
+  }
+  72% {
+    content: "Contact I";
+  }
+  80% {
+    content: "Contact In";
+  }
+  88% {
+    content: "Contact Inf";
+  }
+  100% {
+    content: "Contact Info";
+  }
+}
+
+.skillGroup{
+  scale: 0;
+  animation: skillGroup 3s 3s forwards;
+}
+@keyframes skillGroup {
+  to {
+    scale: 1;
   }
 }
 
@@ -110,8 +147,33 @@ html{
     height: .1em;
     width: 0%;
     margin-left: 50%;
-    animation: topLine 5s alternate forwards steps(70) 1s; /*change change steps for every line based on their size*/
 }
+.topLine.one{
+  animation: topLine 5s alternate forwards steps(70) 1s; 
+}
+.topLine.two{
+  animation: topLine 4s alternate forwards steps(50) 2s; 
+}
+.topLine.three{
+  animation: topLine 3s alternate forwards steps(50) 3s; 
+}
+
+.shortLine{
+    background-color: lightskyblue;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+}
+.shortLine.one{
+  animation: topLine 3s alternate forwards steps(30) 2s;
+}
+.shortLine.two{
+  animation: topLine 3s alternate forwards steps(30) 3s;
+}
+.shortLine.three{
+  animation: topLine 3s alternate forwards steps(30) 4s;
+}
+
 @keyframes topLine {
   from {
     width: 0%;
@@ -124,22 +186,7 @@ html{
   }
 }
 
-.footerBox{
-  background-color: rgb(135, 206, 235);
-  margin: auto;
-  margin-top: 1em;
-  width: 0%;
-  height: 0%;
-  animation: footerAnim 3s forwards linear 1s;
-}
 
-@keyframes footerAnim{
-  to{
-    margin-top: .2em;
-    height: 55%;
-    width:95%;
-  }
-}
 
 
 .cv:hover, .stats:hover, .exp:hover,
@@ -253,5 +300,23 @@ html{
   }
   100%{
     
+  }
+}
+
+.footerBox{
+  background-color: rgb(135, 206, 235);
+  margin: auto;
+  margin-top: 1em;
+  width: 0%;
+  height: 0%;
+  border-radius: 5px 5px 5px 5px;
+  animation: footerAnim 3s forwards linear 1s, glow 0s 10s forwards;
+}
+
+@keyframes footerAnim{
+  to{
+    margin-top: .2em;
+    height: 55%;
+    width:95%;
   }
 }
