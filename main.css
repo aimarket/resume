@@ -49,18 +49,30 @@ html{
   font-size: .35em;
 }
 
+.h2-border::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  background: linear-gradient(to right, lightskyblue, black);
+  z-index: -1;
+  filter: blur(20px);
+  animation: borderextend 1s forwards, glow 1s 10s forwards;
+}
+
 .h2-border {
   width: 0%;
   box-shadow: 0 0 0em lightskyblue;
   background-color: lightskyblue;
+  background-image: linear-gradient(to right, lightskyblue, black);
   border-radius: 5px 5px 5px 5px;
   opacity: .9;
-  animation: borderextend 6s forwards 3s, glow 0s 10s forwards;
+  animation: borderextend 6s forwards 3s;
 }
 
 @keyframes glow {
-  100% {
-    box-shadow: 0 0 1em lightskyblue;
+  to {
+    height: 1.5%;
   }
 }
 @keyframes borderextend {
@@ -143,7 +155,15 @@ html{
 
 .skillGroup{
   transform: translateX(50%) scalex(0);
-  animation: skillGroup 2.5s 2.7s forwards;
+}
+.skillGroup.one{
+  animation: skillGroup 1.5s 2.7s forwards;
+}
+.skillGroup.two{
+  animation: skillGroup 1.5s 3.5s forwards;
+}
+.skillGroup.three{
+  animation: skillGroup 1.5s 4.3s forwards;
 }
 @keyframes skillGroup {
   to {
