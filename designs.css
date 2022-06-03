@@ -40,9 +40,11 @@ p{
     color: aliceblue;
 }
 
-.QRimage{
+
+.code{
     width: 100%;
 }
+
 
 .skill{
     font-size: clamp(.1rem, 1vw + 1rem, 2rem);
