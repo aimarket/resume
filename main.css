@@ -52,12 +52,12 @@ html{
 .h2-border::before{
   content: "";
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 0%;
   background: linear-gradient(to right, lightskyblue, black);
   z-index: -1;
   filter: blur(20px);
-  animation: borderextend 1s forwards, glow 1s 10s forwards;
+  animation: glow 1s 8s forwards;
 }
 
 .h2-border {
@@ -143,13 +143,45 @@ html{
   }
 }
 
-.QRimage{
-  opacity: 0;
-  animation: QrCodeFadeIn 3s 2s forwards;
+.QR{
+  position: relative;
 }
-@keyframes QrCodeFadeIn {
+.QROverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: rgba(167, 249, 255, 0.323);
+  filter: blur(1px);
+  z-index: 1;
+  animation: QROverlayScan 2s forwards 3.1s, HideScan 1s forwards 4s;
+}
+@keyframes HideScan{
   to{
-    opacity: 1;
+    height: 0;
+  }
+}
+@keyframes QROverlayScan {
+  to{
+    top: 100%;
+  }
+}
+.QRHidden{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 1;
+  animation: QRHiddenReveal 2s forwards 3s;
+}
+
+@keyframes QRHiddenReveal {
+  to{
+    top: 100%;
+    height: 0%;
   }
 }
 
@@ -160,10 +192,10 @@ html{
   animation: skillGroup 1.5s 2.7s forwards;
 }
 .skillGroup.two{
-  animation: skillGroup 1.5s 3.5s forwards;
+  animation: skillGroup 1.2s 3.3s forwards;
 }
 .skillGroup.three{
-  animation: skillGroup 1.5s 4.3s forwards;
+  animation: skillGroup 1s 4s forwards;
 }
 @keyframes skillGroup {
   to {
@@ -289,15 +321,31 @@ html{
   }
 }
 
+.h3Box{
+  overflow: hidden;
+  width: 100%;
+}
+.slideLeft{
+  transform : translateX(100%);
+  
+  animation: letterReveal 3s  1s forwards;
+}
+
+@keyframes letterReveal{
+  to{
+    transform: translateX(0);
+  }
+}
+
 .traitGroup{
   opacity: 0;
   width:0%;
 }
 .traitGroup.one{
-  animation: traitReveal 3s 1s forwards;
+  animation: traitReveal 3.5s 1s forwards;
 }
 .traitGroup.two{
-  animation: traitReveal 3s 1.5s forwards;
+  animation: traitReveal 3.2s 1.5s forwards;
 }
 .traitGroup.three{
   animation: traitReveal 3s 2s forwards;
@@ -333,6 +381,17 @@ html{
   }
 }
 
+.footerBox::before{
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 0%;
+  background: lightskyblue;
+  z-index: -1;
+  filter: blur(20px);
+  animation: glow 1.5s 8s forwards;
+}
+
 .footerBox{
   background-color: rgb(135, 206, 235);
   margin: auto;
@@ -340,7 +399,7 @@ html{
   width: 0%;
   height: 0%;
   border-radius: 5px 5px 5px 5px;
-  animation: footerAnim 3s forwards linear 1s, glow 0s 10s forwards;
+  animation: footerAnim 3s forwards linear 1s;
 }
 
 @keyframes footerAnim{
