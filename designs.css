@@ -84,3 +84,8 @@ p::before{
     color: rgb(255, 78, 78);
     text-decoration: line-through;
 }
+
+a{
+    text-decoration: none;
+}
+

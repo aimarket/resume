@@ -186,6 +186,43 @@ html{
 }
 
 .skillGroup{
+  position: relative;
+}
+.skillGroupHidden{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 1;
+}
+.skillGroup.one .skillGroupHidden{
+  animation: skillGroupOne .5s forwards 8;
+}
+.skillGroup.two .skillGroupHidden{
+  animation: skillGroupTwo .5s forwards 1.3s 5;
+}       
+.skillGroup.three .skillGroupHidden{
+  animation: skillGroupThree .5s forwards 1.4s 4;
+}
+@keyframes skillGroupOne {
+  to{
+    opacity: 0;
+  }
+}
+@keyframes skillGroupTwo {
+  to{
+    opacity: 0;
+  }
+}
+@keyframes skillGroupThree {
+  to{
+    opacity: 0;
+  }
+}
+/*
+.skillGroup{
   transform: translateX(50%) scalex(0);
 }
 .skillGroup.one{
@@ -201,7 +238,7 @@ html{
   to {
     transform: translateX(0) scalex(1);
   }
-}
+}*/
 
 
 .topLine{
