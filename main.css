@@ -253,25 +253,33 @@ html{
 
 .cv:hover, .stats:hover, .exp:hover,
 .social:hover, .contact:hover{
-  border-radius: 1em;
-  border: .2em solid rgb(99, 116, 131);
-  text-shadow: .1em .1em 1em rgb(187, 234, 216);
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  
+  text-shadow: 0 0 1em rgb(187, 234, 216);
 }
 
 
-.cvT, .statsT, .expT,
-.socialT, .contactT{
-  font-size: clamp(0rem, 1vw + .1rem, .5rem);
+.cv, .stats, .exp,
+.social, .contact{
+  font-size: 0em;
+  color: lightskyblue;
   animation: navReveal 3s forwards linear 1s;
 }
 
 @keyframes navReveal {
   to{
-  color: skyblue;
   font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
   }
 }
 
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
 .arrowLeft, .arrowRight{
   display: inline-block;
   border: solid black;
