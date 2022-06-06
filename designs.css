@@ -76,6 +76,17 @@ p::before{
     bottom: .1em;
     font-size: large;
 }
+.box .miniBox{
+    position: absolute;
+    color: lightskyblue;
+    text-align: center;
+    width: 40%;
+    height: 25%;
+    border: 1px solid lightskyblue;
+    bottom: .5em;
+    right: .3em;
+    font-size: xx-small;
+}
 
 .traitGroups{
     margin-top: 1em;
@@ -102,3 +113,13 @@ a{
     text-decoration: none;
 }
 
+/* add these to the grids 
+    vvvvvvvvvvvvvvvvvvvv*/
+.skill{
+    outline: 2px dashed sandybrown;
+}
+.profGroups{
+    outline: 2px solid plum;
+    width: 100%;
+    height: 100%;
+}
