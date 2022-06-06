@@ -36,7 +36,7 @@ ul.leaders span + span {
     background: black}
 
 p{
-    font-size: clamp(.2rem, 1vw + 1rem, 2.2rem);
+    font-size: clamp(.2rem, 1vw + 1rem, 2.5rem);
     color: aliceblue;
     margin-left: 2em;
 }
@@ -62,6 +62,19 @@ p::before{
     width: 5em;
     height: 4em;
     margin: .5em;
+    position: relative;
+}
+.box h4{
+    color: rgb(187, 234, 216);
+    margin-left: .3em;
+    margin-top: .2em;
+    font-weight: lighter;
+}
+.box span{
+    margin-left: .3em;
+    position: absolute;
+    bottom: .1em;
+    font-size: large;
 }
 
 .traitGroups{

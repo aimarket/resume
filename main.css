@@ -198,47 +198,19 @@ html{
   z-index: 1;
 }
 .skillGroup.one .skillGroupHidden{
-  animation: skillGroupOne .5s forwards 8;
+  animation: skillGroupFlash .5s forwards 1s 5;
 }
 .skillGroup.two .skillGroupHidden{
-  animation: skillGroupTwo .5s forwards 1.3s 5;
+  animation: skillGroupFlash .5s forwards 1.3s 3;
 }       
 .skillGroup.three .skillGroupHidden{
-  animation: skillGroupThree .5s forwards 1.4s 4;
+  animation: skillGroupFlash .5s forwards 1.4s 2;
 }
-@keyframes skillGroupOne {
+@keyframes skillGroupFlash {
   to{
     opacity: 0;
   }
 }
-@keyframes skillGroupTwo {
-  to{
-    opacity: 0;
-  }
-}
-@keyframes skillGroupThree {
-  to{
-    opacity: 0;
-  }
-}
-/*
-.skillGroup{
-  transform: translateX(50%) scalex(0);
-}
-.skillGroup.one{
-  animation: skillGroup 1.5s 2.7s forwards;
-}
-.skillGroup.two{
-  animation: skillGroup 1.2s 3.3s forwards;
-}
-.skillGroup.three{
-  animation: skillGroup 1s 4s forwards;
-}
-@keyframes skillGroup {
-  to {
-    transform: translateX(0) scalex(1);
-  }
-}*/
 
 
 .topLine{
@@ -378,7 +350,7 @@ html{
 
 @keyframes letterReveal{
   to{
-    transform: translateX(0);
+    transform: translateX(5%);
   }
 }
 
@@ -398,7 +370,7 @@ html{
 
 @keyframes traitReveal {
   to{
-    opacity: 100;
+    opacity: 1;
     width: 100%;
   }
 }
@@ -423,6 +395,16 @@ html{
   }
   100%{
     
+  }
+}
+
+.trait{
+  opacity: 0;
+  animation: traitTextReveal .5s forwards 4s;
+}
+@keyframes traitTextReveal {
+  to{
+    opacity: 1;
   }
 }
 
