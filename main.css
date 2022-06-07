@@ -21,19 +21,20 @@ canvas{
   }
 
 body{
-    background-color: var(--bg-color);
+    background-color: white;
     opacity: .0;
-    animation: CRTon 1.5s forwards ease-in;
+    animation: CRTon 1s forwards ease-in;
     font-family: "Roboto Mono";
 }
 @keyframes CRTon {
     to{
+      background-color: var(--bg-color);
       opacity: 1;
     }
 }
 .page{
   transform: scale(0);
-  animation: expand 2s forwards;
+  animation: expand 3s forwards cubic-bezier(0.71,.2, 0, 1);
 }
 @keyframes expand {
     to{
