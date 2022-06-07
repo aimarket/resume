@@ -56,6 +56,7 @@ p::before{
     width: 6.5em;
     height: 4em;
     margin: .5em;
+    margin-top: 4%;
     position: relative;
 }
 .box h4{
@@ -87,7 +88,7 @@ p::before{
     margin-top: 1em;
 }
 .traitBox{
-    outline: 2px solid aliceblue;
+    border: 1px solid aliceblue;
     width: 33%;
     height: 2em;
     margin-left: .1em;
@@ -111,29 +112,24 @@ a{
 /* add these to the grids 
     vvvvvvvvvvvvvvvvvvvv*/
 .techskills{
-    outline: 2px solid aliceblue;
     height: 100%;
 }
 .skillGroups{
-    outline: 2px dashed black;
     height: 100%;
 }
 .skillGroup{
-    outline: red 2px dashed;
     height: 100%;
 }
 .skill{
-    outline: 2px dashed sandybrown;
     width : 100%;
 }
 .profGroups{
-    outline: 2px solid plum;
     width: 100%;
     height: 100%;
 }
 .profGroup{
-    outline: 2px dashed wheat;
     height: 100%;
+    margin-top: 1%;
 }
 .profGroupTextContainer{
     width: 41%;
@@ -144,7 +140,6 @@ a{
     position: relative;
     width: 100%;
     height: 100%;
-    outline: 0px solid rgb(8, 255, 86);
 }
 /*Make skill line into a flex from the container*/
 .skillLineContainer{
@@ -155,7 +150,6 @@ a{
     align-items: center;
     height: 100%;
     width: 100%;
-    outline: 1px solid rgb(8, 255, 86);
 }
 .skillLine{
     position: relative;
@@ -164,7 +158,7 @@ a{
     background-color: lightskyblue;
 }
 .skillLineEdge{
-    width: .3%;
+    width: .5%;
     height: 50%;
     background-color: lightskyblue;
 }
@@ -176,7 +170,7 @@ a{
     width: 80%;
     border-radius: 30%;
     background-color: lightskyblue;
-    border: 1px solid aliceblue;
+    border: 1px solid rgb(194, 226, 255);
 }
 
 /*Make skill level into a flex from the container*/
@@ -189,7 +183,6 @@ a{
     height: 100%;
     width: 100%;
     gap: 3%;
-    outline: 1px solid rgb(8, 255, 86);
 }
 .skillLevel{
     width: 20%;
@@ -200,6 +193,6 @@ a{
     border-radius: 0 0 0 70%;
 }
 .level{
-    background-color: aliceblue;
+    background-color: rgba(229, 243, 255, 0.859);
     color: #000;
 }

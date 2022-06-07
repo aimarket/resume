@@ -198,13 +198,13 @@ html{
   z-index: 1;
 }
 .skillGroup.one .skillGroupHidden{
-  animation: skillGroupFlash .5s forwards 1s 5;
+  animation: skillGroupFlash .3s forwards 1s 5;
 }
 .skillGroup.two .skillGroupHidden{
   animation: skillGroupFlash .5s forwards 1.3s 3;
 }       
 .skillGroup.three .skillGroupHidden{
-  animation: skillGroupFlash .5s forwards 1.4s 2;
+  animation: skillGroupFlash .4s forwards 1.4s 2;
 }
 @keyframes skillGroupFlash {
   to{
@@ -212,6 +212,88 @@ html{
   }
 }
 
+.skillLineContainer{
+  opacity: 0;
+}
+.skillone{
+  animation: skillLineReveal .1s forwards 2s;
+}
+.skilltwo{
+  animation: skillLineReveal .1s forwards 2.2s;
+}
+.skillthree{
+  animation: skillLineReveal .1s forwards 2.4s;
+}
+.skillfour{
+  animation: skillLineReveal .1s forwards 2.6s;
+}
+.skillfive{
+  animation: skillLineReveal .1s forwards 2.8s;
+}
+.skillsix{
+  animation: skillLineReveal .1s forwards 3s;
+}
+.skillseven{
+  animation: skillLineReveal .1s forwards 3.2s;
+}
+.skilleight{
+  animation: skillLineReveal .1s forwards 3.4s;
+}
+.skillnine{
+  animation: skillLineReveal .1s forwards 3.6s;
+}
+.skillten{
+  animation: skillLineReveal .1s forwards 3.8s;
+}
+.skilleleven{
+  animation: skillLineReveal .1s forwards 4s;
+}
+
+@keyframes skillLineReveal {
+  to{
+    opacity: 1;
+  }
+}
+
+.levelone{
+  animation: skillLevelHide .5s forwards 3s;
+}
+.leveltwo{
+  animation: skillLevelHide .5s forwards 3.2s;
+}
+.levelthree{
+  animation: skillLevelHide .5s forwards 3.4s;
+}
+.levelfour{
+  animation: skillLevelHide .5s forwards 3.6s;
+}
+.levelfive{
+  animation: skillLevelHide .5s forwards 3.8s;
+}
+.levelsix{
+  animation: skillLevelHide .5s forwards 4s;
+}
+.levelseven{
+  animation: skillLevelHide .5s forwards 4.2s;
+}
+.leveleight{
+  animation: skillLevelHide .5s forwards 4.4s;
+}
+.levelnine{
+  animation: skillLevelHide .5s forwards 4.6s;
+}
+.levelten{
+  animation: skillLevelHide .5s forwards 4.8s;
+}
+.leveleleven{
+  animation: skillLevelHide .5s forwards 5s;
+}
+
+@keyframes skillLevelHide {
+  to{
+    opacity: 0;
+  }
+}
 
 .topLine{
     background-color: lightskyblue;
@@ -229,22 +311,6 @@ html{
   animation: topLine 3s alternate forwards steps(50) 3s; 
 }
 
-.shortLine{
-    background-color: lightskyblue;
-    height: .1em;
-    width: 0%;
-    margin-left: 50%;
-}
-.shortLine.one{
-  animation: topLine 3s alternate forwards steps(30) 2s;
-}
-.shortLine.two{
-  animation: topLine 3s alternate forwards steps(30) 3s;
-}
-.shortLine.three{
-  animation: topLine 3s alternate forwards steps(30) 4s;
-}
-
 @keyframes topLine {
   from {
     width: 0%;
@@ -257,7 +323,22 @@ html{
   }
 }
 
-
+.shortLine{
+  background-color: rgb(187, 234, 216);
+  height: .5px;
+  width: 0%;
+}
+.shortLine.two{
+animation: shortLine 3s alternate forwards steps(30) 3s;
+}
+.shortLine.three{
+animation: shortLine 3s alternate forwards steps(30) 4s;
+}
+@keyframes shortLine {
+  to{
+    width: 100%;
+  }
+}
 
 
 .cv:hover, .stats:hover, .exp:hover,
