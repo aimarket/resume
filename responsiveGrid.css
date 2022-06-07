@@ -96,6 +96,18 @@
         display: flex;
         flex-direction: row;
     }
+    .box{
+        flex: 20%;
+    }
+    .profGroups{
+        display: flex;
+        flex-direction: column;
+        flex: 80%;
+    }
+    .profGroup{
+        display: flex;
+        flex-direction: row;
+    }
     
     .mid{
         grid-area: mid;

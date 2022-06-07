@@ -115,6 +115,9 @@ a{
 
 /* add these to the grids 
     vvvvvvvvvvvvvvvvvvvv*/
+.skillGroup{
+    outline: red 2px dashed;
+}
 .skill{
     outline: 2px dashed sandybrown;
 }
