@@ -53,8 +53,8 @@ p::before{
 .box{
     border: .15em solid skyblue;
     border-radius: 3%;
-    width: 6.5em;
-    height: 4em;
+    width: 8em;
+    height: 5em;
     margin: .5em;
     margin-top: 4%;
     position: relative;
@@ -95,9 +95,10 @@ p::before{
     margin-right: .1em;
 }
 .trait{
-    font-size: clamp(.1rem, 1vw + .7rem, 2rem);
+    font-size: clamp(0rem, .8vw + .7rem, 2rem);
     margin-top: .4em;
     text-align: center;
+    overflow: hidden;
 }
 
 .classified{

@@ -87,7 +87,9 @@ html{
   width: 100%;
   margin-left: .2em;
   content: "";
-  animation: revealContact 2.5s 4s steps(12) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: revealContact 3s 4.5s steps(12) forwards;
 }
 .h2Contact::after{
   content: "▯ ";
