@@ -37,7 +37,7 @@ async function revealTags() {
     await timer(1000);
     for (var i = 0; i < pTags.length; i++) {
         await timer(50);
-        pTags[i].style.color = 'transparent';
+        pTags[i].style.color = 'aliceblue';
     }
 }
 

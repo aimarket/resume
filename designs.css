@@ -43,7 +43,6 @@ p{
     font-size: clamp(.2rem, 1vw + 1rem, 2.5rem);
     color: transparent;
     margin-left: 2em;
-    text-shadow: 0px 0px 7px white;
 }
 p::before{
     content: "→";
