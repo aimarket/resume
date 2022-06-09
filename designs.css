@@ -37,7 +37,7 @@ ul.leaders span + span {
 
 p{
     font-size: clamp(.2rem, 1vw + 1rem, 2.5rem);
-    color: aliceblue;
+    color: transparent;
     margin-left: 2em;
 }
 p::before{

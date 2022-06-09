@@ -18,6 +18,8 @@ canvas{
     --bg-color: rgb(0, 0, 0);
     --typewriterSpeed: 1s;
     --typewriterCharacters: 10;
+    --pBGColor: rgb(0, 0, 0);
+    --pZIndex: 1;
   }
 
 body{
@@ -27,14 +29,18 @@ body{
     font-family: "Roboto Mono";
 }
 @keyframes CRTon {
-    to{
+  70%{
+      opacity: .0;
       background-color: var(--bg-color);
+    }
+  100%{
       opacity: 1;
+      background-color: var(--bg-color);
     }
 }
 .page{
   transform: scale(0);
-  animation: expand 3s forwards cubic-bezier(0.71,.2, 0, 1);
+  animation: expand 3s forwards cubic-bezier(1 ,0 , 0, 1);
 }
 @keyframes expand {
     to{
@@ -63,7 +69,6 @@ html{
 
 .h2-border {
   width: 0%;
-  box-shadow: 0 0 0em lightskyblue;
   background-color: lightskyblue;
   background-image: linear-gradient(to right, lightskyblue, black);
   border-radius: 5px 5px 5px 5px;
@@ -520,6 +525,7 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
     width:95%;
   }
 }
+
 
 /*TODO:
   - convert the typinging animaiton into JAVASCRIPT
