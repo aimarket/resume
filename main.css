@@ -75,6 +75,13 @@ html{
   opacity: .9;
   animation: borderextend 6s forwards 3s;
 }
+h2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: black;
+  margin-left: .2em;
+}
 
 @keyframes glow {
   to {
@@ -528,7 +535,7 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
 
 .leaders{
   opacity: 0;
-  animation: leadersReveal .5s forwards 2s;
+  animation: leadersReveal 2s forwards 4s;
 }
 
 @keyframes leadersReveal {
