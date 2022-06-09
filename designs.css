@@ -2,12 +2,16 @@
 h3{
     color: lightskyblue;
     font-size: clamp(.5rem, 1.5vw + 1rem, 2.3rem);
+    opacity: 0;
 }
 h4{
     color: lightskyblue;
     font-size: clamp(.2rem, 1.3vw + 1rem, 2.3rem);
+    opacity: 0;
 }
-
+h5{
+    opacity: 0;
+}
 
 
 li{
@@ -135,7 +139,9 @@ a{
 .profGroupTextContainer{
     width: 41%;
     height: 100%;
-    font-size: smaller;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: clamp(.0rem, 1vw + .5rem, 2rem);
 }
 .profGroupHiddenContainer{
     position: relative;
@@ -196,4 +202,7 @@ a{
 .level{
     background-color: rgba(229, 243, 255, 0.859);
     color: #000;
+}
+span{
+    opacity: 0;
 }

@@ -206,13 +206,13 @@ html{
   z-index: 1;
 }
 .skillGroup.one .skillGroupHidden{
-  animation: skillGroupFlash .3s forwards 1s 5;
+  animation: skillGroupFlash .3s forwards 2s 5;
 }
 .skillGroup.two .skillGroupHidden{
-  animation: skillGroupFlash .5s forwards 1.3s 3;
+  animation: skillGroupFlash .5s forwards 2.3s 3;
 }       
 .skillGroup.three .skillGroupHidden{
-  animation: skillGroupFlash .4s forwards 1.4s 2;
+  animation: skillGroupFlash .4s forwards 2.4s 2;
 }
 @keyframes skillGroupFlash {
   to{
@@ -224,37 +224,37 @@ html{
   opacity: 0;
 }
 .skillone{
-  animation: skillLineReveal .1s forwards 2s;
-}
-.skilltwo{
-  animation: skillLineReveal .1s forwards 2.2s;
-}
-.skillthree{
-  animation: skillLineReveal .1s forwards 2.4s;
-}
-.skillfour{
-  animation: skillLineReveal .1s forwards 2.6s;
-}
-.skillfive{
-  animation: skillLineReveal .1s forwards 2.8s;
-}
-.skillsix{
   animation: skillLineReveal .1s forwards 3s;
 }
-.skillseven{
+.skilltwo{
   animation: skillLineReveal .1s forwards 3.2s;
 }
-.skilleight{
+.skillthree{
   animation: skillLineReveal .1s forwards 3.4s;
 }
-.skillnine{
+.skillfour{
   animation: skillLineReveal .1s forwards 3.6s;
 }
-.skillten{
+.skillfive{
   animation: skillLineReveal .1s forwards 3.8s;
 }
-.skilleleven{
+.skillsix{
   animation: skillLineReveal .1s forwards 4s;
+}
+.skillseven{
+  animation: skillLineReveal .1s forwards 4.2s;
+}
+.skilleight{
+  animation: skillLineReveal .1s forwards 4.4s;
+}
+.skillnine{
+  animation: skillLineReveal .1s forwards 4.6s;
+}
+.skillten{
+  animation: skillLineReveal .1s forwards 4.8s;
+}
+.skilleleven{
+  animation: skillLineReveal .1s forwards 5s;
 }
 
 @keyframes skillLineReveal {
@@ -264,37 +264,37 @@ html{
 }
 
 .levelone{
-  animation: skillLevelHide .5s forwards 3s;
-}
-.leveltwo{
-  animation: skillLevelHide .5s forwards 3.2s;
-}
-.levelthree{
-  animation: skillLevelHide .5s forwards 3.4s;
-}
-.levelfour{
-  animation: skillLevelHide .5s forwards 3.6s;
-}
-.levelfive{
-  animation: skillLevelHide .5s forwards 3.8s;
-}
-.levelsix{
   animation: skillLevelHide .5s forwards 4s;
 }
-.levelseven{
+.leveltwo{
   animation: skillLevelHide .5s forwards 4.2s;
 }
-.leveleight{
+.levelthree{
   animation: skillLevelHide .5s forwards 4.4s;
 }
-.levelnine{
+.levelfour{
   animation: skillLevelHide .5s forwards 4.6s;
 }
-.levelten{
+.levelfive{
   animation: skillLevelHide .5s forwards 4.8s;
 }
-.leveleleven{
+.levelsix{
   animation: skillLevelHide .5s forwards 5s;
+}
+.levelseven{
+  animation: skillLevelHide .5s forwards 5.2s;
+}
+.leveleight{
+  animation: skillLevelHide .5s forwards 5.4s;
+}
+.levelnine{
+  animation: skillLevelHide .5s forwards 5.6s;
+}
+.levelten{
+  animation: skillLevelHide .5s forwards 5.8s;
+}
+.leveleleven{
+  animation: skillLevelHide .5s forwards 6s;
 }
 
 @keyframes skillLevelHide {
@@ -526,6 +526,16 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
   }
 }
 
+.leaders{
+  opacity: 0;
+  animation: leadersReveal .5s forwards 2s;
+}
+
+@keyframes leadersReveal {
+  to{
+    opacity: 1;
+  }
+}
 
 /*TODO:
   - convert the typinging animaiton into JAVASCRIPT
