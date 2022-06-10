@@ -372,7 +372,9 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
   color: lightskyblue;
   animation: navReveal 3s forwards linear 1s;
 }
-
+.exp{
+  color: aliceblue;
+}
 @keyframes navReveal {
   to{
   font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
