@@ -6,7 +6,7 @@
 // procedurally.
 // Start loading the image right away, not after the onload event.
 var lines = new Image();
-lines.src = '/resume/scanLines.png';
+lines.src = '/resume/assets/scanlines.png';
 
 window.addEventListener('load', fakeCRT, false);
 
