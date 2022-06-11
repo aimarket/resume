@@ -63,6 +63,14 @@ p::before{
     margin-top: 4%;
     position: relative;
 }
+.boxHover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 .box h4{
     color: rgb(187, 234, 216);
     font-size: clamp(.3rem, 1vw + 1rem, 2.5rem);

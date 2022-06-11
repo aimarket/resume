@@ -42,3 +42,33 @@ async function revealTags() {
 }
 
 revealTags();
+
+skillBox = document.getElementsByClassName('boxHover')[0];
+
+let infoBox = document.createElement('div');
+infoBox.className = 'infoBox';
+infoBox.style.position = 'absolute';
+infoBox.style.width = '60%';
+infoBox.style.height = '20%';
+infoBox.style.left = '20%';
+infoBox.style.top = '40%';
+infoBox.style.backgroundColor = '#fff';
+infoBox.style.border = '1px solid #000';
+infoBox.style.borderRadius = '5px';
+infoBox.style.zIndex = '-10';
+infoBox.style.opacity = '0';
+document.body.appendChild(infoBox);
+
+//fix animations with information box
+skillBox.addEventListener("mouseover", () => {
+    let infoBox = document.getElementsByClassName('infoBox')[0];
+    infoBox.style.animation = 'boxHover 1.4s ease-in forwards';
+}
+);
+skillBox.addEventListener("mouseout", () => {
+    let infoBox = document.getElementsByClassName('infoBox')[0];
+    console.log(infoBox);
+    infoBox.style.animation = 'boxHover 1.4s ease-in backwards';
+    }
+);
+
