@@ -67,7 +67,6 @@ skillBox.addEventListener("mouseover", () => {
 );
 skillBox.addEventListener("mouseout", () => {
     let infoBox = document.getElementsByClassName('infoBox')[0];
-    console.log(infoBox);
     infoBox.style.animation = 'boxHover 1.4s ease-in backwards';
     }
 );
