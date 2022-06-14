@@ -43,6 +43,25 @@ async function revealTags() {
 
 revealTags();
 
+
+//asyncrhonous function to iterate through all the h2 tags in the document and
+//simulate a typewriter effect by placeing the letters one by one in the h2 tags
+async function appear(ele, index) {
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+    await timer(3000);
+    for (var i = 0; i < ele.length; i++) {
+        typeWritterLocation[index].innerHTML += ele[i];
+        await timer(Math.floor(Math.random() * 200)+200);
+    }
+}
+let content = ['Contact Info', 'Education', 'Career History'];
+let typeWritterLocation = document.getElementsByTagName('h2');
+console.log(typeWritterLocation[1]);
+appear(content[0].split(''), 0);
+appear(content[1].split(''), 1);
+appear(content[2].split(''), 2);
+
+
 skillBox = document.getElementsByClassName('boxHover')[0];
 
 let infoBox = document.createElement('div');
@@ -61,12 +80,12 @@ document.body.appendChild(infoBox);
 
 //fix animations with information box
 skillBox.addEventListener("mouseover", () => {
-    let infoBox = document.getElementsByClassName('infoBox')[0];
+    infoBox = document.getElementsByClassName('infoBox')[0];
     infoBox.style.animation = 'boxHover 1.4s ease-in forwards';
 }
 );
 skillBox.addEventListener("mouseout", () => {
-    let infoBox = document.getElementsByClassName('infoBox')[0];
+    infoBox = document.getElementsByClassName('infoBox')[0];
     infoBox.style.animation = 'boxHover 1.4s ease-in backwards';
     }
 );

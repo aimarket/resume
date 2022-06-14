@@ -50,6 +50,7 @@ p::before{
     text-shadow: 0 0 2px rgb(187, 234, 216);
 }
 
+
 .code{
     width: 100%;
 }
@@ -216,3 +217,4 @@ a{
 span{
     opacity: 0;
 }
+
