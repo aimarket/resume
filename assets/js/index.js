@@ -56,37 +56,47 @@ async function appear(ele, index) {
 }
 let content = ['Contact Info', 'Education', 'Career History'];
 let typeWritterLocation = document.getElementsByTagName('h2');
-console.log(typeWritterLocation[1]);
+
 appear(content[0].split(''), 0);
 appear(content[1].split(''), 1);
 appear(content[2].split(''), 2);
 
 
-skillBox = document.getElementsByClassName('boxHover')[0];
+skillBox = document.getElementsByClassName('boxHover');
 
 let infoBox = document.createElement('div');
 infoBox.className = 'infoBox';
 infoBox.style.position = 'absolute';
-infoBox.style.width = '60%';
-infoBox.style.height = '20%';
-infoBox.style.left = '20%';
-infoBox.style.top = '40%';
-infoBox.style.backgroundColor = '#fff';
+infoBox.style.width = '77%';
+infoBox.style.height = '95%';
+infoBox.style.top = '0';
+infoBox.style.left = '23%';
+infoBox.style.backgroundColor = '#000000';
 infoBox.style.border = '1px solid #000';
 infoBox.style.borderRadius = '5px';
-infoBox.style.zIndex = '-10';
+infoBox.style.zIndex = '10';
+infoBox.style.pointerEvents = 'none';
 infoBox.style.opacity = '0';
-document.body.appendChild(infoBox);
+document.getElementsByClassName('skillGroups')[0].appendChild(infoBox);
 
-//fix animations with information box
-skillBox.addEventListener("mouseover", () => {
-    infoBox = document.getElementsByClassName('infoBox')[0];
-    infoBox.style.animation = 'boxHover 1.4s ease-in forwards';
-}
-);
-skillBox.addEventListener("mouseout", () => {
-    infoBox = document.getElementsByClassName('infoBox')[0];
-    infoBox.style.animation = 'boxHover 1.4s ease-in backwards';
+//add 
+for(var i = 0; i < skillBox.length; i++) {
+    skillBox[i].addEventListener("mouseover", () => {
+        infoBox = document.getElementsByClassName('infoBox')[0];
+        if(document.body.clientWidth < 600) {
+            infoBox.style.left = '30%';
+            infoBox.style.width = '70%';
+        }
+        else {
+            infoBox.style.left = '23%';
+            infoBox.style.width = '77%';
+        }
+        infoBox.style.animation = 'boxHover .4s ease-in forwards';
     }
-);
-
+    );
+    skillBox[i].addEventListener("mouseout", () => {
+        infoBox = document.getElementsByClassName('infoBox')[0];
+        infoBox.style.animation = 'none';
+        }
+    );
+}

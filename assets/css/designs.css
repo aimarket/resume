@@ -130,6 +130,7 @@ a{
 }
 .skillGroups{
     height: 100%;
+    position: relative;
 }
 .skillGroup{
     height: 100%;

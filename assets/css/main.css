@@ -508,13 +508,7 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
 */
 
 @keyframes boxHover {
-  from{
-    opacity: 0;
-    z-index: -10;
-  }
   to{
     opacity: 1;
-    z-index: 10;
   }
-  
 }
