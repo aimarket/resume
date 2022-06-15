@@ -79,7 +79,24 @@ infoBox.style.pointerEvents = 'none';
 infoBox.style.opacity = '0';
 document.getElementsByClassName('skillGroups')[0].appendChild(infoBox);
 
-//add 
+function fillInfoBox(content){
+    let info = document.createElement('div');
+    info.className = 'skillInfo';
+    info.style.textDecorationColor = '#fff';
+    info.innerHTML = content;
+    info.style.fontSize = '1em';
+    info.style.backgroundColor = '#000000';
+    info.style.border = '1px solid rgb(135, 206, 250)';
+    info.style.borderRadius = '5px';
+    info.style.boxShadow = '0px 0px 1em rgb(135, 206, 250)';
+    info.style.width = '100%';
+    info.style.height = '100%';
+    info.style.zIndex = '11';
+    info.style.position = 'relative';
+    infoBox.appendChild(info);
+}
+
+//add event listener on hover to show the info box
 for(var i = 0; i < skillBox.length; i++) {
     skillBox[i].addEventListener("mouseover", () => {
         infoBox = document.getElementsByClassName('infoBox')[0];
@@ -88,14 +105,17 @@ for(var i = 0; i < skillBox.length; i++) {
             infoBox.style.width = '70%';
         }
         else {
-            infoBox.style.left = '23%';
-            infoBox.style.width = '77%';
+            infoBox.style.left = '24%';
+            infoBox.style.width = '76%';
         }
+        fillInfoBox("Entering some information here");
         infoBox.style.animation = 'boxHover .4s ease-in forwards';
     }
     );
     skillBox[i].addEventListener("mouseout", () => {
         infoBox = document.getElementsByClassName('infoBox')[0];
+        removeInfo = document.getElementsByClassName('skillInfo')[0];
+        infoBox.removeChild(removeInfo);
         infoBox.style.animation = 'none';
         }
     );
