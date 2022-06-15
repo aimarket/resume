@@ -66,34 +66,22 @@ skillBox = document.getElementsByClassName('boxHover');
 
 let infoBox = document.createElement('div');
 infoBox.className = 'infoBox';
-infoBox.style.position = 'absolute';
-infoBox.style.width = '77%';
-infoBox.style.height = '95%';
-infoBox.style.top = '0';
-infoBox.style.left = '23%';
-infoBox.style.backgroundColor = '#000000';
-infoBox.style.border = '1px solid #000';
-infoBox.style.borderRadius = '5px';
-infoBox.style.zIndex = '10';
-infoBox.style.pointerEvents = 'none';
-infoBox.style.opacity = '0';
 document.getElementsByClassName('skillGroups')[0].appendChild(infoBox);
 
 function fillInfoBox(content){
-    let info = document.createElement('div');
-    info.className = 'skillInfo';
-    info.style.textDecorationColor = '#fff';
-    info.innerHTML = content;
-    info.style.fontSize = '1em';
-    info.style.backgroundColor = '#000000';
-    info.style.border = '1px solid rgb(135, 206, 250)';
-    info.style.borderRadius = '5px';
-    info.style.boxShadow = '0px 0px 1em rgb(135, 206, 250)';
-    info.style.width = '100%';
-    info.style.height = '100%';
-    info.style.zIndex = '11';
-    info.style.position = 'relative';
-    infoBox.appendChild(info);
+    for(var i = 0; i < 3; i++){
+        let infoContainer = document.createElement('div');
+        infoContainer.className = 'infoContainer';
+        infoBox.appendChild(infoContainer);
+        for(var x = 0; x < 3; x++){
+            let info = document.createElement('div');
+            info.className = 'skillInfo';
+            info.innerHTML = content;
+            let infoContainer = document.getElementsByClassName('infoContainer')[i];
+            infoContainer.appendChild(info);
+        }
+    }
+    
 }
 
 //add event listener on hover to show the info box
@@ -114,8 +102,10 @@ for(var i = 0; i < skillBox.length; i++) {
     );
     skillBox[i].addEventListener("mouseout", () => {
         infoBox = document.getElementsByClassName('infoBox')[0];
-        removeInfo = document.getElementsByClassName('skillInfo')[0];
-        infoBox.removeChild(removeInfo);
+        removeInfo = document.getElementsByClassName('infoContainer');
+        for(var i = removeInfo.length-1; i > -1; i--){
+            infoBox.removeChild(removeInfo[i]);
+        }
         infoBox.style.animation = 'none';
         }
     );
