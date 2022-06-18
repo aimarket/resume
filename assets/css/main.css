@@ -325,8 +325,8 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
 }
 
 
-.cv:hover, .stats:hover, .exp:hover,
-.social:hover, .contact:hover{
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover{
   cursor: pointer;
   color: rgb(217, 255, 241);
   font-size: larger !important;
@@ -335,13 +335,13 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
 }
 
 
-.cv, .stats, .exp,
-.social, .contact{
+.cv, .misc, .resume,
+.projects, .contact{
   font-size: 0em;
   color: lightskyblue;
   animation: navReveal 3s forwards linear 1s;
 }
-.exp{
+.resume{
   color: aliceblue;
 }
 @keyframes navReveal {

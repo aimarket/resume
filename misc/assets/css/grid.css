@@ -1,0 +1,115 @@
+
+@media (min-width: 600px){
+    .page {
+        font-size: 16px;
+        height: 100vh;
+        max-width: 900px;
+        margin: auto;
+        gap: .5em;
+        display: grid;
+        grid-template-areas:
+            'nav'
+            'top';
+        grid-template-rows: .5fr 8.4fr;
+    }
+
+
+    .nav{
+        grid-area: nav;
+    }
+    .options{
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-areas: 
+        'LA cv stats exp social contact RA';
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+
+    }
+    .LA{
+        grid-area: LA;
+    }
+    .cv{
+        grid-area: cv;
+    }
+    .stats{
+        grid-area: stats;
+    }
+    .exp{
+        grid-area: exp;
+    }
+    .social{
+        grid-area: social;
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .RA{
+        grid-area: RA;
+    }
+
+    .top{
+        grid-area: top;
+        gap: .5em;
+    }
+
+}
+
+@media (max-width: 600px){
+    .page {
+        font-size: 16px;
+        height: 100vh;
+        max-width: 900px;
+        gap: .5em;
+        display: grid;
+        grid-template-areas:
+            'nav'
+            'top';
+        grid-template-rows: .5fr 8.4fr;
+        
+    }
+    
+    
+    
+    .container{
+        outline: red dashed 0px;
+    }
+    
+    .nav{
+        grid-area: nav;
+    }
+    .options{
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-areas: 
+        'LA cv stats exp social contact RA';
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+        
+    }
+    .LA{
+        grid-area: LA;
+    }
+    .cv{
+        grid-area: cv;
+    }
+    .stats{
+        grid-area: stats;
+    }
+    .exp{
+        grid-area: exp;
+    }
+    .social{
+        grid-area: social;
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .RA{
+        grid-area: RA;
+    }
+    
+    .top{
+        grid-area: top;
+    }
+}

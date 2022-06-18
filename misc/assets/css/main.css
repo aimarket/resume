@@ -1,0 +1,119 @@
+
+html{
+    font-size: .35em;
+}
+
+body{
+    background-color: black;
+    font-family: "Roboto Mono";
+}
+
+.graph-container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.graph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0px, rgba(54, 226, 248, .5) 0%, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(54, 226, 248, 0.5) 0%, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px); 
+    background-size: 4em 2em, 4em 2em;
+    height: 100%;
+    perspective: 2000px;
+    z-index: -2;
+}
+.Left{
+    animation: layLeft 13s forwards;
+}
+
+@keyframes layLeft {
+    50% {
+        transform: perspective(300px) scale(.2) rotateY(70deg);
+        opacity: 1;
+    }
+    100% {
+        transform: perspective(300px) scale(.2) rotateY(70deg) rotateX(-90deg);
+        opacity: 0;
+    }
+}
+.Right{
+    animation: layRight 13s  forwards;
+}
+@keyframes layRight {
+    50% {
+        transform: perspective(300px) scale(.2) rotateY(-70deg);
+        opacity: 1;
+    }
+    100% {
+        transform: perspective(300px) scale(.2) rotateY(-70deg) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+
+
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv, .misc, .resume,
+.projects, .contact{
+  font-size: 0em;
+  color: lightskyblue;
+  animation: navReveal 3s forwards linear 1s;
+}
+.misc{
+  color: aliceblue;
+}
+@keyframes navReveal {
+  to{
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+  }
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 3s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+
+a{
+    text-decoration: none;
+}
