@@ -6,6 +6,8 @@ html{
 body{
     background-color: black;
     font-family: "Roboto Mono";
+    margin: 0;
+
 }
 
 .graph-container {
@@ -25,34 +27,36 @@ body{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0px, rgba(61, 229, 255, 0.5) 0%, rgba(85, 0, 255, 0.5) 1px, rgba(0, 0, 0, 0) 0px), linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(15, 3, 252, 0.84) 0%, rgba(255, 0, 234, 0.5) 1px, rgba(0, 0, 0, 0) 0px); 
     background-size: 4em 2em, 4em 2em;
     height: 100%;
-    perspective: 2000px;
+    perspective: 100px;
     z-index: -2;
 }
 
 .Left{
-    animation: layLeft 13s forwards linear;
+    animation: layLeft 7s forwards linear;
+    transform: scale(.1) translateX(-100%) rotateY(90deg) perspective(2000px);
 }
 
 @keyframes layLeft {
-    50% {
-        transform: perspective(300px) scale(.6) rotateY(70deg) translateX(-10%);
+    60% {
+        transform: perspective(100px) scale(5) translateX(-18%) rotateY(70deg);
         opacity: 1;
     }
     100% {
-        transform: perspective(10px) scale(.2) rotateY(70deg) rotateX(-90deg) translateX(100%);
+        transform: perspective(5px) scale(1) rotateY(70deg) translateX(-70%);
         opacity: 0;
     }
 }
 .Right{
-    animation: layRight 13s  forwards linear;
+    animation: layRight 7s  forwards linear;
+    transform: scale(.1) translateX(100%) rotateY(-90deg) perspective(2000px);
 }
 @keyframes layRight {
-    50% {
-        transform: perspective(300px) scale(.6) rotateY(-70deg) translateX(10%);
+    60% {
+        transform: perspective(100px) scale(5) translateX(18%) rotateY(-70deg);
         opacity: 1;
     }
     100% {
-        transform: perspective(10px) scale(.2) rotateY(-70deg) rotateX(90deg) translateX(-100%);
+        transform: perspective(5px) scale(1) rotateY(-70deg) translateX(70%);
         opacity: 0;
     }
 }
@@ -73,7 +77,7 @@ body{
 .projects, .contact{
   font-size: 0em;
   color: lightskyblue;
-  animation: navReveal 3s forwards linear 10s;
+  animation: navReveal 1s forwards linear 6s;
 }
 .misc{
   color: aliceblue;
@@ -94,7 +98,7 @@ body{
   display: inline-block;
   border: solid black;
   border-width: 0 0 0 0;
-  animation: arrowAnim 3s forwards linear 10s;
+  animation: arrowAnim 1s forwards linear 6s;
 }
 
 
@@ -117,4 +121,14 @@ body{
 
 a{
     text-decoration: none;
+}
+
+.page{
+    transform: scale(.1);
+    animation: pageAnim 1s forwards linear 6s;
+}
+@keyframes pageAnim{
+  to{
+    transform: scale(1);
+  }
 }

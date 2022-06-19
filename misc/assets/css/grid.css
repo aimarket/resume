@@ -65,7 +65,7 @@
         grid-template-areas:
             'nav'
             'top';
-        grid-template-rows: .5fr 8.4fr;
+        grid-template-rows: .5fr 8fr;
         
     }
     
