@@ -32,12 +32,12 @@ body{
 }
 
 .Left{
-    animation: layLeft 7s forwards linear;
+    animation: layLeft 6.5s forwards linear;
     transform: scale(.1) translateX(-100%) rotateY(90deg) perspective(2000px);
 }
 
 @keyframes layLeft {
-    60% {
+    50% {
         transform: perspective(100px) scale(5) translateX(-18%) rotateY(70deg);
         opacity: 1;
     }
@@ -47,11 +47,11 @@ body{
     }
 }
 .Right{
-    animation: layRight 7s  forwards linear;
+    animation: layRight 6.5s  forwards linear;
     transform: scale(.1) translateX(100%) rotateY(-90deg) perspective(2000px);
 }
 @keyframes layRight {
-    60% {
+    50% {
         transform: perspective(100px) scale(5) translateX(18%) rotateY(-70deg);
         opacity: 1;
     }
@@ -60,6 +60,45 @@ body{
         opacity: 0;
     }
 }
+
+.graph-container2 {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transform: scale(0);
+    animation: fadeIn 1s 6s forwards linear;
+}
+.graphB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0px, rgba(135, 32, 253, 0.5) 10%, rgba(0, 174, 255, 0.5) 2px, rgba(0, 0, 0, 0) 0px), linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(15, 3, 252, 0.84) 10%, rgba(0, 153, 255, 0.5) 2px, rgba(0, 0, 0, 0) 0px); 
+    background-size: 10% 5%, 5% 10%;
+    height: 100%;
+    perspective: 200px;
+    z-index: -2;
+    border: 5px solid rgb(116, 103, 253);
+    box-shadow: 0 0 10em 5em rgb(73, 9, 236);
+    transform: perspective(500px) rotateX(45deg) scaleX(.4) scaleY(.3);
+    animation: graphB 20s 5s infinite linear;
+}
+
+@keyframes graphB {
+    to{
+        transform: perspective(500px) rotateX(45deg) scaleX(.4) scaleY(.3) rotateZ(360deg);
+    }
+}
+@keyframes fadeIn {
+    to{
+        transform: scale(1);
+    }
+}
+
 
 
 
@@ -131,4 +170,29 @@ a{
   to{
     transform: scale(1);
   }
+}
+.nav{
+    margin-top: .5em;
+}
+
+/* canter the div insie the div*/
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.title{
+    color: aliceblue;
+    font-size: clamp(2rem, 1.5vw + 6rem, 10rem);
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgb(141, 255, 211);
+    transform: scale(0);
+    animation: fadeIn 1s forwards 6s;
 }
