@@ -10,6 +10,7 @@ body{
 
 }
 
+
 .graph-container {
     overflow: hidden;
     height: 100%;
@@ -18,6 +19,7 @@ body{
     top: 0;
     left: 0;
     z-index: -2;
+    pointer-events: none;
 }
 .graph {
     position: absolute;
@@ -32,7 +34,7 @@ body{
 }
 
 .Left{
-    animation: layLeft 6.5s forwards linear;
+    animation: layLeft 4.5s forwards linear;
     transform: scale(.1) translateX(-100%) rotateY(90deg) perspective(2000px);
 }
 
@@ -47,7 +49,7 @@ body{
     }
 }
 .Right{
-    animation: layRight 6.5s  forwards linear;
+    animation: layRight 4.5s  forwards linear;
     transform: scale(.1) translateX(100%) rotateY(-90deg) perspective(2000px);
 }
 @keyframes layRight {
@@ -70,7 +72,7 @@ body{
     left: 0;
     z-index: -2;
     transform: scale(0);
-    animation: fadeIn 1s 6s forwards linear;
+    animation: fadeIn 1s 4s forwards linear;
 }
 .graphB {
     position: absolute;
@@ -81,13 +83,23 @@ body{
     background-size: 10% 5%, 5% 10%;
     height: 100%;
     perspective: 200px;
-    z-index: -2;
+    z-index: 3;
     border: 5px solid rgb(116, 103, 253);
-    box-shadow: 0 0 10em 5em rgb(73, 9, 236);
+    box-shadow: 0 0 8em 2em rgb(73, 9, 236);
     transform: perspective(500px) rotateX(45deg) scaleX(.4) scaleY(.3);
-    animation: graphB 20s 5s infinite linear;
+    animation: graphB 20s 3s infinite linear;
 }
 
+.graphB:hover{
+    transform: perspective(500px) rotateX(45deg) scaleX(.6) scaleY(.45);
+    box-shadow: 0 0 8em 3em rgb(98, 38, 252);
+    cursor: pointer;
+}
+
+.graphB:active{
+    transform: perspective(500px) rotateX(45deg) scaleX(.3) scaleY(.2.3);
+    box-shadow: 0 0 8em 1em rgb(45, 17, 113);
+}
 @keyframes graphB {
     to{
         transform: perspective(500px) rotateX(45deg) scaleX(.4) scaleY(.3) rotateZ(360deg);
@@ -107,7 +119,6 @@ body{
   cursor: pointer;
   color: rgb(217, 255, 241);
   font-size: larger !important;
-  
   text-shadow: 0 0 1em rgb(187, 234, 216);
 }
 
@@ -116,7 +127,7 @@ body{
 .projects, .contact{
   font-size: 0em;
   color: lightskyblue;
-  animation: navReveal 1s forwards linear 6s;
+  animation: navReveal 1s forwards linear 4s;
 }
 .misc{
   color: aliceblue;
@@ -137,7 +148,7 @@ body{
   display: inline-block;
   border: solid black;
   border-width: 0 0 0 0;
-  animation: arrowAnim 1s forwards linear 6s;
+  animation: arrowAnim 1s forwards linear 4s;
 }
 
 
@@ -164,7 +175,7 @@ a{
 
 .page{
     transform: scale(.1);
-    animation: pageAnim 1s forwards linear 6s;
+    animation: pageAnim 1s forwards linear 4s;
 }
 @keyframes pageAnim{
   to{
@@ -186,6 +197,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 .title{
@@ -194,5 +206,5 @@ a{
     font-weight: bolder;
     text-shadow: 0 0 10px rgb(141, 255, 211);
     transform: scale(0);
-    animation: fadeIn 1s forwards 6s;
+    animation: fadeIn 1s forwards 4s;
 }
