@@ -1,0 +1,129 @@
+
+html{
+    font-size: .35em;
+}
+
+body{
+    background-color: black;
+    font-family: "Roboto Mono";
+    margin: 0;
+
+}
+
+
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv, .misc, .resume,
+.projects, .contact{
+  font-size: 0em;
+  color: lightskyblue;
+  animation: navReveal 1s forwards linear 1s;
+}
+.projects{
+  color: aliceblue;
+}
+@keyframes navReveal {
+  to{
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+  }
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 1s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+.topLine{
+    background-color: lightskyblue;
+    margin-top: .3em;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+    
+  animation: topLine 3s alternate forwards steps(70) 1s; 
+}
+@keyframes topLine {
+    from {
+        width: 0%;
+        margin-left: 50%;
+    }
+    to{
+        margin-left: 2.5%;
+        width: 95%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.page{
+    transform: scale(.1);
+    animation: pageAnim 1s forwards linear 1s;
+}
+@keyframes pageAnim{
+  to{
+    transform: scale(1);
+  }
+}
+.nav{
+    margin-top: .5em;
+}
+
+.optionsContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.optionSoftware{
+    border: 2px solid lightskyblue;
+    border-radius: 5px;
+    width: 50%;
+    height: 70%;
+    margin-top: 10%;
+    color: white;
+    font-size: 50px;
+}
+
+.optionHardware{
+    border: 2px solid lightskyblue;
+    border-radius: 5px; 
+    width: 50%;
+    height: 70%;
+    margin-top: 10%;
+}

@@ -168,6 +168,25 @@ body{
   transform: rotate(-45deg);
 }
 
+.topLine{
+    background-color: lightskyblue;
+    margin-top: .3em;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+    
+  animation: topLine 3s alternate forwards steps(70) 5s; 
+}
+@keyframes topLine {
+    from {
+        width: 0%;
+        margin-left: 50%;
+    }
+    to{
+        margin-left: 2.5%;
+        width: 95%;
+    }
+}
 
 a{
     text-decoration: none;
