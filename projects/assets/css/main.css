@@ -104,26 +104,54 @@ a{
 
 .optionsContainer{
     position: absolute;
-    top: 0;
+    top: 9%;
     left: 0;
-    height: 100%;
+    height: 90%;
     width: 100%;
     display: flex;
+    gap: 4em;
+    justify-content: center;
 }
-.optionSoftware{
-    border: 2px solid lightskyblue;
-    border-radius: 5px;
-    width: 50%;
-    height: 70%;
-    margin-top: 10%;
-    color: white;
-    font-size: 50px;
+.option{
+    border: .5em solid lightskyblue;
+    border-radius: 5em; 
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.option::after{
+    top:5%;
+    left:10%;
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    background-color: lightskyblue;
+    content: "";
+    z-index: -1;
+    filter: blur(10em);
+    opacity: .3;
+}
+.option:hover::after{
+    animation: buzz 1s forwards;
+}
+@keyframes buzz {
+    to{
+        background-color: aliceblue;
+        top:2.5%;
+        left:5%;
+        width: 90%;
+        height: 95%;
+        opacity: .5;
+    }
 }
 
-.optionHardware{
-    border: 2px solid lightskyblue;
-    border-radius: 5px; 
-    width: 50%;
-    height: 70%;
-    margin-top: 10%;
+.text{
+    font-size: clamp(2rem, 5vw + 2rem, 100rem);
+    color: black;
+    text-shadow: 0 0 2em lightskyblue;
+    pointer-events: none;
 }
