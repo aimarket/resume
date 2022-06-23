@@ -55,6 +55,14 @@
         flex-direction: column;
     }
 
+    .optionsContainer{
+        display: flex;
+    }
+
+    .option{
+        width: 40%;
+        height: 100%;
+    }
 
 }
 
@@ -113,5 +121,15 @@
     
     .top{
         grid-area: top;
+    }
+
+    .optionsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .option{
+        width: 99%;
+        height: 40%;
     }
 }

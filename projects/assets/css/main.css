@@ -24,15 +24,10 @@ body{
 .projects, .contact{
   font-size: 0em;
   color: lightskyblue;
-  animation: navReveal 1s forwards linear 1s;
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
 }
 .projects{
   color: aliceblue;
-}
-@keyframes navReveal {
-  to{
-  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
-  }
 }
 
 .arrowLeft:hover, .arrowRight:hover{
@@ -90,13 +85,8 @@ a{
 }
 
 .page{
-    transform: scale(.1);
-    animation: pageAnim 1s forwards linear 1s;
-}
-@keyframes pageAnim{
-  to{
-    transform: scale(1);
-  }
+    filter: blur(.5em);
+    animation: unblur 2s forwards linear;
 }
 .nav{
     margin-top: .5em;
@@ -108,15 +98,13 @@ a{
     left: 0;
     height: 90%;
     width: 100%;
-    display: flex;
     gap: 4em;
     justify-content: center;
 }
+
 .option{
-    border: .5em solid lightskyblue;
+    /*border: .5em solid lightskyblue;*/
     border-radius: 5em; 
-    width: 40%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +112,7 @@ a{
     cursor: pointer;
 }
 .option::after{
-    top:5%;
+    top:7%;
     left:10%;
     width: 80%;
     height: 90%;
@@ -141,17 +129,34 @@ a{
 @keyframes buzz {
     to{
         background-color: aliceblue;
-        top:2.5%;
-        left:5%;
-        width: 90%;
-        height: 95%;
         opacity: .5;
     }
 }
 
 .text{
     font-size: clamp(2rem, 5vw + 2rem, 100rem);
+    color: aliceblue;
+    filter: blur(.5em);
+    animation: unblur 3s forwards;
+}
+
+/*change text css based on .option:hover*/
+.option:hover .text{
     color: black;
-    text-shadow: 0 0 2em lightskyblue;
-    pointer-events: none;
+    font-size: clamp(3rem, 5vw + 3rem, 100rem);
+}
+
+@keyframes unblur{
+  to{
+    filter: blur(0);
+  }
+}
+
+.matrix{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .7;
 }
