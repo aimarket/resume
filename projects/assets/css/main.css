@@ -98,65 +98,79 @@ a{
     left: 0;
     height: 90%;
     width: 100%;
-    gap: 4em;
+    gap: 3%;
     justify-content: center;
 }
 
-.option{
-    /*border: .5em solid lightskyblue;*/
-    border-radius: 5em; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-.option::after{
-    top:7%;
-    left:10%;
-    width: 80%;
-    height: 90%;
-    position: absolute;
-    background-color: lightskyblue;
-    content: "";
-    z-index: -1;
-    filter: blur(10em);
-    opacity: .3;
-}
-.option:hover::after{
-    animation: buzz 1s forwards;
-}
-@keyframes buzz {
-    to{
-        background-color: aliceblue;
-        opacity: .5;
-    }
-}
 
-.text{
-    font-size: clamp(2rem, 5vw + 2rem, 100rem);
-    color: aliceblue;
-    filter: blur(.5em);
-    animation: unblur 3s forwards;
+.softwareWindow{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(1em);
+  animation: unblur 2s forwards linear;
 }
-
-/*change text css based on .option:hover*/
-.option:hover .text{
-    color: black;
-    font-size: clamp(3rem, 5vw + 3rem, 100rem);
-}
-
 @keyframes unblur{
   to{
     filter: blur(0);
   }
 }
+.softwareContainer{
+  aspect-ratio: 16 / 9;
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  background: linear-gradient(rgba(230, 1, 255, 0.774) 0%, rgb(255, 140, 0) 100%);
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+}
+.softwareInner{
+  position: absolute;
+  background-color: black;
+  width: 99%;
+  height: 98%;
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.softwareText{
+  position: absolute;
+  color: white;
+  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+  width: 97%;
+  height: 95%;
+}
+.matrix:hover .softwareText{
+  color: black;
+}
+.blur{
+  filter: blur(5em);
+}
 
+.hardwareWindow{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hardwareContainer{
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  outline: 1px solid yellow;
+  width: 100%;
+  max-height: 100%;
+  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+  color: red;
+}
 .matrix{
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 2%;
+  width: 98%;
   height: 100%;
-  opacity: .7;
 }

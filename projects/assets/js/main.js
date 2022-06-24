@@ -1,10 +1,8 @@
-var container = document.getElementsByClassName("software")[0],
+var container = document.getElementsByClassName("softwareInner")[0],
     canvas = container.appendChild( document.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' );
-context.globalCompositeOperation = 'lighter';
 canvas.className = 'matrix';
-canvas.width = container.clientWidth/2;//set the width of the canvas to the width of the container
-canvas.height = container.clientHeight/2;//set the height of the canvas to the height of the container
+
 
 var clicked = false;
 var show = false
@@ -14,13 +12,23 @@ container.addEventListener("mouseover", () => {
     }
     clicked = true;
     show = true;
+    if(container.clientWidth>container.clientHeight){
+        canvas.width = container.clientWidth;
+        canvas.height = container.clientHeight;
+    }else{
+        canvas.width = container.clientWidth/2;//set the width of the canvas to the width of the container
+        canvas.height = container.clientHeight/2;//set the height of the canvas to the height of the container
+    }
+    typeWritterLocation[0].style.color = 'transparent';
+    
 });
 container.addEventListener("mouseout", () => {
     show = false;
+    typeWritterLocation[0].style.color = 'white';
 });
-var textStrip = ['诶', '比', '西', '迪', '伊', '吉', '艾', '杰', '开', '哦', '屁', '提', '维'];
+var textStrip = '01'.split('');
 
-var stripCount = 60, charCount = 40, stripX = new Array(), stripY = new Array(), dY = new Array(), stripFontSize = new Array();
+var stripCount = 70, charCount = 60, stripX = new Array(), stripY = new Array(), dY = new Array(), stripFontSize = new Array();
 /*  for every character in the vertical strip,  */
 for (var i = 0; i < charCount; i++) {
     stripX[i] = Math.floor(Math.random()*1265);//x-axis location of the strip
@@ -34,7 +42,7 @@ function drawStrip(x, y) {
     for (var k = 0; k <= 20; k++) {
         var randChar = textStrip[Math.floor(Math.random()*textStrip.length)];//random character from the textStrip array
         if (context.fillText) {
-            context.fillStyle = '#000';//color of the text
+            context.fillStyle = '#00ff00';//color of the text
             context.fillText(randChar, x, y);//draw the text and location
         }
         y -= stripFontSize[k];//move the text down based on the font size
@@ -47,7 +55,8 @@ function draw() {
     //for the number of characters in the vertical strip, draw that many strips
     if(show)
         {for (var j = 0; j < stripCount; j++) {
-            context.font = stripFontSize[j]+'px';//font size is set based on the font size array
+            context.font = stripFontSize[j]+'px Roboto Mono';//font size is set based on the font size array
+            context.fontWeight = 'bolder';//font weight is set to bold
             context.textBaseline = 'top';//text is drawn from the top of the canvas
             context.textAlign = 'center';//text is drawn from the center of the canvas
 
@@ -65,3 +74,19 @@ function draw() {
 }
 
 
+async function appear(ele, index) {
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+    await timer(1000);
+    for (var i = 0; i < ele.length; i++) {
+        typeWritterLocation[index].innerHTML += ele[i];
+        await timer(Math.floor(Math.random() * 200)+200);
+    }
+}
+let content = ['cmatrix'];
+let typeWritterLocation = document.getElementsByClassName('softwareText');
+
+appear(content[0].split(''), 0);
+
+typeWritterLocation[0].addEventListener("hover", () => {
+    typeWritterLocation[0].style.color = 'transparent';
+});
