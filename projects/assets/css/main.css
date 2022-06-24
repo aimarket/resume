@@ -95,9 +95,10 @@ a{
 .optionsContainer{
     position: absolute;
     top: 9%;
-    left: 0;
+    left: 2%;
     height: 90%;
-    width: 100%;
+    width: 96%;
+    margin: auto;
     gap: 3%;
     justify-content: center;
 }
@@ -126,7 +127,6 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
 }
 .softwareInner{
   position: absolute;
@@ -137,6 +137,14 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (orientation: portrait){
+  .softwareContainer{
+    border-radius: 2em;
+  }
+  .softwareInner{
+    border-radius: 2em;
+  }
 }
 .softwareText{
   position: absolute;
@@ -171,6 +179,6 @@ a{
   position: absolute;
   top: 0;
   left: 2%;
-  width: 98%;
+  width: 96%;
   height: 100%;
 }
