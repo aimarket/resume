@@ -42,7 +42,7 @@ function drawStrip(x, y) {
     for (var k = 0; k <= 20; k++) {
         var randChar = textStrip[Math.floor(Math.random()*textStrip.length)];//random character from the textStrip array
         if (context.fillText) {
-            context.fillStyle = '#00ff00';//color of the text
+            context.fillStyle = 'lightskyblue';//color of the text
             context.fillText(randChar, x, y);//draw the text and location
         }
         y -= stripFontSize[k];//move the text down based on the font size
@@ -82,11 +82,7 @@ async function appear(ele, index) {
         await timer(Math.floor(Math.random() * 200)+200);
     }
 }
-let content = ['cmatrix'];
+let content = ['Software'];
 let typeWritterLocation = document.getElementsByClassName('softwareText');
 
 appear(content[0].split(''), 0);
-
-typeWritterLocation[0].addEventListener("hover", () => {
-    typeWritterLocation[0].style.color = 'transparent';
-});

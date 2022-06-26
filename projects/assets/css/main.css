@@ -149,13 +149,22 @@ a{
 .softwareText{
   position: absolute;
   color: white;
-  font-size: clamp(1rem, 1vw + 1rem, 10rem);
+  font-size: clamp(1rem, 1vw + 2rem, 10rem);
   width: 97%;
   height: 95%;
 }
-.matrix:hover .softwareText{
-  color: black;
+.softwareHoverMeText{
+  color: lightskyblue;
+  font-size: clamp(1rem, 1vw + 5rem, 10rem);
+  text-shadow: 0 0 20px rgb(187, 234, 216);
+  animation: breathe 3s infinite alternate;
 }
+@keyframes breathe{
+  to{
+    opacity: .3;
+  }
+}
+
 .blur{
   filter: blur(5em);
 }
