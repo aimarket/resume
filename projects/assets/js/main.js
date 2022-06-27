@@ -20,11 +20,13 @@ container.addEventListener("mouseover", () => {
         canvas.height = container.clientHeight/2;//set the height of the canvas to the height of the container
     }
     typeWritterLocation[0].style.color = 'transparent';
+    document.getElementsByClassName("softwareHoverMeText")[0].style.color = 'transparent';
     
 });
 container.addEventListener("mouseout", () => {
     show = false;
     typeWritterLocation[0].style.color = 'white';
+    document.getElementsByClassName("softwareHoverMeText")[0].style.color = 'lightskyblue';
 });
 var textStrip = '01'.split('');
 
