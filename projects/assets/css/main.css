@@ -230,10 +230,17 @@ a{
 
 .hardwareLogo{
   position: relative;
-  height: 50%;
+  height: 40%;
   width: 50%;
   z-index: 1;
+  background-color: black;
+  border-radius: 100%;
 }
+
+.hardwareCPUCover:hover .hardwareLogo{
+  animation: colorChange 2s forwards ease-in-out;
+}
+
 .hardwareLines{
   position: absolute;
   width: 100%;
