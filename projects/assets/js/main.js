@@ -28,6 +28,12 @@ container.addEventListener("mouseout", () => {
     typeWritterLocation[0].style.color = 'white';
     document.getElementsByClassName("softwareHoverMeText")[0].style.color = 'lightskyblue';
 });
+
+container.addEventListener("click", () => {
+    window.location.href = "/resume/projects/software/";
+})
+
+
 var textStrip = '01'.split('');
 
 var stripCount = 70, charCount = 60, stripX = new Array(), stripY = new Array(), dY = new Array(), stripFontSize = new Array();

@@ -1,0 +1,99 @@
+
+html{
+    font-size: .35em;
+}
+
+body{
+    background-color: black;
+    font-family: "Roboto Mono";
+    margin: 0;
+
+}
+
+
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv, .misc, .resume,
+.projects, .contact{
+  font-size: 0em;
+  color: lightskyblue;
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+}
+.projects{
+  color: aliceblue;
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 1s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+.topLine{
+    background-color: lightskyblue;
+    margin-top: .3em;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+    
+  animation: topLine 3s alternate forwards steps(70) 1s; 
+}
+@keyframes topLine {
+    from {
+        width: 0%;
+        margin-left: 50%;
+    }
+    to{
+        margin-left: 2.5%;
+        width: 95%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.nav{
+    margin-top: .5em;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5em;
+    background: linear-gradient(#1a1a1a, #6c6c6c);
+}
