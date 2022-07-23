@@ -30,7 +30,7 @@ container.addEventListener("mouseout", () => {
 });
 
 container.addEventListener("click", () => {
-    window.location.href = "/resume/projects/software/";
+    window.location.href = "/projects/software/";
 })
 
 
