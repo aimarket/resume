@@ -1,27 +1,180 @@
+html{
+  font-size: .35em;
+  background-color: #000;
+}
 
 body{
   display:flex;
   align-items:center;
   justify-content:center;
   height:100vh;
-  background:#333;
 }
 
-.container{          
-  background:
-    url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic8.depositphotos.com%2F1192060%2F916%2Fi%2F950%2Fdepositphotos_9169280-stock-photo-business-meeting.jpg&f=1&nofb=1')  
-    no-repeat center center;
-  background-size:100%;
-  color: transparent;
-  -webkit-background-clip: text;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Roboto Mono";
+}
+
+.wrapper {
+  height: 100vh;
+  background: #000;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+a{
+  text-decoration: none;
+}
+.portrait {
+  width: 10%;
+  font-size: 11.5px;
+  letter-spacing: -2px;
+  word-spacing: -2px;
+  line-height: 6px;
+  font-weight: 500;
+  text-align: center;
+  background: url('/coverletter/assets/alex2-min.jpg') fixed center no-repeat;
+  background-size: contain;
+  animation: peel 7s forwards linear;
+}
+@keyframes peel {
+  to{
+    width: 80%;
+  }
+}
+
+/* This part is important for the feature itself */
+.portrait {
   background-clip: text;
-  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,.1);
 }
 
-h1{
-    font-size:10em;
-    font-weight:bolder;
-    line-height: .7em;
-    text-align:center;
-    text-transform:uppercase;
+/*Below is part of the header */
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv, .misc, .resume,
+.projects, .contact{
+  font-size: 0em;
+  color: lightskyblue;
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+}
+.cv{
+  color: aliceblue;
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 1s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+.topLine{
+    background-color: lightskyblue;
+    margin-top: .3em;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+    
+  animation: topLine 3s alternate forwards steps(70) 1s; 
+}
+@keyframes topLine {
+    from {
+        width: 0%;
+        margin-left: 50%;
+    }
+    to{
+        margin-left: 2.5%;
+        width: 95%;
+    }
+}
+
+  .page {
+      position: absolute;
+      font-size: 16px;
+      height: 100vh;
+      max-width: 1200px;
+      margin: auto;
+      gap: .5em;
+      display: grid;
+      grid-template-areas:
+          'nav'
+          'top';
+      grid-template-rows: .5fr 8.4fr;
+  }
+
+
+  .nav{
+      grid-area: nav;
+  }
+  .options{
+      text-align: center;
+      align-items: center;
+      display: grid;
+      grid-template-areas: 
+      'LA cv stats exp social contact RA';
+      grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+
+  }
+  .LA{
+      grid-area: LA;
+  }
+  .cv{
+      grid-area: cv;
+  }
+  .stats{
+      grid-area: stats;
+  }
+  .exp{
+      grid-area: exp;
+  }
+  .social{
+      grid-area: social;
+  }
+  .contact{
+      grid-area: contact;
+  }
+  .RA{
+      grid-area: RA;
+  }
+
+  .top{
+      grid-area: top;
+      gap: .5em;
+      display: flexbox;
+      flex-direction: column;
   }
