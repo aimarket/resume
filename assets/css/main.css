@@ -396,7 +396,7 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
   50%{
     border: 1px solid skyblue;
     border-radius: 0 0 1em 0;
-    width: 100%;
+    width: 10%;
     margin-bottom:.3em;
   }
   100%{
